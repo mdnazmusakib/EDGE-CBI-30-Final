@@ -8,6 +8,8 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Books from './Components/Books/Books.jsx';
+import Search from './Components/Search/Search.jsx';
+import Favorites from './Components/Favorites/Favorites.jsx';
 
 const router = createBrowserRouter([
   {
@@ -15,10 +17,18 @@ const router = createBrowserRouter([
     element: <App/>,
     children:[
       {
+        path: "/search",
+        element: <Search/>
+      },
+      {
         // path: "/books/:title",
-        path: "/books",
+        path: "/myself",
         // loader: ({params})=> fetch("https://openlibrary.org/search.json?title=" + params.title),
         element: <Books/>,
+      },
+      {
+        path: "/favorites",
+        element: <Favorites/>
       },
     ]
   },
