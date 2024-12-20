@@ -10,12 +10,17 @@ import {
 import Books from './Components/Books/Books.jsx';
 import Search from './Components/Search/Search.jsx';
 import Favorites from './Components/Favorites/Favorites.jsx';
+import Home from './Components/Home/Home.jsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App/>,
     children:[
+      {
+        path: "/",
+        element: <Home/>
+      },
       {
         path: "/search",
         element: <Search/>

@@ -19,20 +19,21 @@ function Books() {
     
   return (
     <div>  
-      <h2 className='flex justify-center items-center'>books: {books.length}</h2>
+      {/* <h2>books: {books.length}</h2> */}
 
-      {/* <div>
+      <div>
         {
-            books.map((book)=>{
+            books.map((book,idx)=>{
                 return(
-                    <div key={book.docs.isbn}> 
-                        <h1>{book.docs.title}</h1>
-                        <p>{book.docs.author_name},{book.docs.first_publish_year}</p>
+                    <div key={idx}> 
+                        <h1>{book.title}</h1>
+                        <p>{book.author_name}</p>
+                        <p>{book.first_publish_year}</p>
                     </div>
                 )
             })
         }
-      </div> */}
+      </div>
     </div>
   )
 }
