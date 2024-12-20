@@ -26,9 +26,16 @@ function Books() {
             books.map((book,idx)=>{
                 return(
                     <div key={idx}> 
-                        <h1>{book.title}</h1>
-                        <p>{book.author_name}</p>
-                        <p>{book.first_publish_year}</p>
+                    <div className='flex gap-5'>
+                        <div className='border'>
+                            <h1>{book.title}</h1>
+                        </div>
+                        <div className='border'>
+                            <p>{book.author_name}</p>
+                            <p>{book.first_publish_year}</p>
+                            <p>Rating: {book.ratings_average}</p>
+                        </div>
+                    </div>
                     </div>
                 )
             })
