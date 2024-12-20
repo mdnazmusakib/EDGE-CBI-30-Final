@@ -19,7 +19,7 @@ function Books() {
     
   return (
     <div>  
-      <h2>books: {books.length}</h2>
+      <h2 className='flex justify-center items-center'>books: {books.length}</h2>
 
       {/* <div>
         {

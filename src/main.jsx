@@ -13,13 +13,16 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <App/>,
+    children:[
+      {
+        // path: "/books/:title",
+        path: "/books",
+        // loader: ({params})=> fetch("https://openlibrary.org/search.json?title=" + params.title),
+        element: <Books/>,
+      },
+    ]
   },
-  {
-    // path: "/books/:title",
-    path: "/books",
-    // loader: ({params})=> fetch("https://openlibrary.org/search.json?title=" + params.title),
-    element: <Books/>,
-  },
+  
   
 ]);
 
