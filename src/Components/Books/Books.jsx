@@ -1,11 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import { useLoaderData, useParams } from 'react-router-dom'
+
 
 function Books() {
-    // const books = useLoaderData();
-
-    // console.log(books)
-
 
     const [books,setBooks]=useState([]);
 
@@ -19,7 +15,6 @@ function Books() {
     
   return (
     <div>  
-      {/* <h2>books: {books.length}</h2> */}
 
       <div>
         {
@@ -29,6 +24,7 @@ function Books() {
                     <div className='flex gap-5'>
                         <div className='border'>
                             <h1>{book.title}</h1>
+                            <img src={`https://covers.openlibrary.org/b/id/${book.cover_i}-S.jpg`} alt="" />
                         </div>
                         <div className='border'>
                             <p>{book.author_name}</p>
