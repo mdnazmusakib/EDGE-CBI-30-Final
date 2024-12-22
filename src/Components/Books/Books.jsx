@@ -21,15 +21,15 @@ function Books() {
             books.map((book,idx)=>{
                 return(
                     <div key={idx}> 
-                    <div className='flex gap-5'>
+                    <div className='flex '>
                         <div className='border'>
-                            <h1>{book.title}</h1>
-                            <img src={`https://covers.openlibrary.org/b/id/${book.cover_i}-S.jpg`} alt="" />
+                            <img src={`https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg`} alt="" />
+                            <p>{book.title}</p>
                         </div>
                         <div className='border'>
                             <p>{book.author_name}</p>
                             <p>{book.first_publish_year}</p>
-                            <p>Rating: {book.ratings_average}</p>
+                            <p>Rating: { book.ratings_average? book.ratings_average.toFixed(1) : "N/A"}</p>
                         </div>
                     </div>
                     </div>

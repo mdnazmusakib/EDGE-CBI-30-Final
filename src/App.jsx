@@ -25,7 +25,7 @@ function App() {
                   <Link to={"/"} className='flex justify-start gap-2 items-center'><FaHome />Home</Link>
                   <Link to={"/search"} className='flex justify-start gap-2 items-center'><IoIosSearch />Search</Link>
                   <Link to={"/myself"} className='flex justify-start gap-2 items-center'><GiBookshelf />My Self</Link>
-                  <Link to={"/favourite"} className='flex justify-start gap-2 items-center'><MdFavorite />Favourite</Link>
+                  <Link to={"/favorites"} className='flex justify-start gap-2 items-center'><MdFavorite />Favourite</Link>
                 </ul>
 
             </div>
