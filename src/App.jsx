@@ -37,7 +37,7 @@ function App() {
           </div>
         </div>
       </div>
-      <div className='flex justify-center items-center'>
+      <div className='flex justify-center items-center mx-auto'>
         <Outlet/>
       </div>
     </div>
