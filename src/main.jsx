@@ -11,6 +11,9 @@ import Books from './Components/Books/Books.jsx';
 import Search from './Components/Search/Search.jsx';
 import Favorites from './Components/Favorites/Favorites.jsx';
 import Home from './Components/Home/Home.jsx';
+import Myself from './Components/Myself//Myself.jsx';
+import Ebook from './Components/Ebook/Ebook.jsx';
+import Borrowedbook from './Components/Borrowedbook/Borrowedbook.jsx';
 
 const router = createBrowserRouter([
   {
@@ -29,7 +32,21 @@ const router = createBrowserRouter([
         // path: "/books/:title",
         path: "/myself",
         // loader: ({params})=> fetch("https://openlibrary.org/search.json?title=" + params.title),
-        element: <Books/>,
+        element: <Myself/>,
+        children:[
+          {
+          path: "/myself",
+          element: <Books/>,
+          },
+          {
+            path: "/myself/borrowedbook",
+            element: <Borrowedbook/>,
+          },
+          {
+            path: "/myself/ebook",
+            element: <Ebook/>,
+          },
+        ]
       },
       {
         path: "/favorites",
